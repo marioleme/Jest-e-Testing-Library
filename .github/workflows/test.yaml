@@ -1,0 +1,26 @@
+name: Run Tests
+
+on:
+  push:
+    branches: ['*']  # seleciona o bracho   , neste caso qualquer o * significa qualquer
+  pull_request:
+    branches: ['master']
+
+jobs:
+  test:
+    runs-on: ubuntu-latest # ambiente onde será executado o teste
+
+    steps: # passos que serão executados
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # versão do node.js
+          cache: 'npm' # cache do npm
+
+      - name: Install dependencies # instala as dependências
+        run: npm install # o comando npm install instala as dependências do projeto
+
+      - name: Run tests # executa os testes
+        run: npm test # o comando npm test executa os testes do projeto
