@@ -345,12 +345,6 @@ export default tseslint.config({
 })
 ```
 
-## Imagem do Projeto
 
-Abaixo está uma prévia visual do projeto:
-
-![Preview do Projeto](./exemplo.png)
-
----
 
 Sinta-se à vontade para contribuir ou sugerir melhorias!
